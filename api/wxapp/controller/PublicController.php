@@ -41,8 +41,8 @@ class PublicController extends RestBaseController
 
         //TODO 真实逻辑实现
         $code      = $data['code'];
-        $appId     = '你的 appid';
-        $appSecret = '你的 secket';
+        $appId     = 'wxa0f50da78034b349';
+        $appSecret = '172fa1d77f1400706f35ee46439995a1';
 
         $response = cmf_curl_get("https://api.weixin.qq.com/sns/jscode2session?appid=$appId&secret=$appSecret&js_code=$code&grant_type=authorization_code");
 
@@ -125,6 +125,21 @@ class PublicController extends RestBaseController
 
         $this->success("登录成功!", ['token' => $token]);
 
+
+    }
+
+    public function version(){
+
+        $version["isshow"] = 1;
+        $version["sxf"] = 0.0;
+        $version["moren"] = "糍粑鸡蛋我也吃鸡蛋吃吧我也吃";
+        $version["url1"] = "https://bsapi.exsde.com";
+        $version["url2"] = "https://bsapi.exsde.com";
+        $version["qrurl"] = "https://bsapi.exsde.com";
+        $version["txsxf"] = 0.02;
+        $version["shilieid"] = "723939EE9DCD948F";
+
+        echo json_encode($version);
 
     }
 
