@@ -20,10 +20,10 @@ class PublicController extends RestBaseController
     {
         $validate = new Validate([
             'code'           => 'require',
-            'encrypted_data' => 'require',
-            'iv'             => 'require',
-            'raw_data'       => 'require',
-            'signature'      => 'require',
+         //   'encrypted_data' => 'require',
+         //   'iv'             => 'require',
+         //   'raw_data'       => 'require',
+         //   'signature'      => 'require',
         ]);
 
         $validate->message([
@@ -130,7 +130,7 @@ class PublicController extends RestBaseController
 
     public function version(){
 
-        $version["isshow"] = 1;
+        $version["isshow"] = 0;
         $version["sxf"] = 0.0;
         $version["moren"] = "糍粑鸡蛋我也吃鸡蛋吃吧我也吃";
         $version["url1"] = "https://bsapi.exsde.com";
@@ -140,6 +140,10 @@ class PublicController extends RestBaseController
         $version["shilieid"] = "723939EE9DCD948F";
 
         echo json_encode($version);
+
+    }
+
+    public function loginuser(){
 
     }
 
