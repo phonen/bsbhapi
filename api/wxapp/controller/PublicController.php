@@ -189,7 +189,7 @@ class PublicController extends RestBaseController
     public function loginuser(){
         $validate = new Validate([
            // 'code'           => 'require',
-               'encrypted_data' => 'require',
+               'encryptedData' => 'require',
                'iv'             => 'require',
               'sessionkey'       => 'require',
            //    'signature'      => 'require',
@@ -197,7 +197,7 @@ class PublicController extends RestBaseController
 
         $validate->message([
             'code.require'           => '缺少参数code!',
-            'encrypted_data.require' => '缺少参数encrypted_data!',
+            'encryptedData.require' => '缺少参数encrypted_data!',
             'iv.require'             => '缺少参数iv!',
             'sessionkey.require'       => '缺少参数sessionkey!',
             'signature.require'      => '缺少参数signature!',
@@ -215,7 +215,7 @@ class PublicController extends RestBaseController
         $sessionKey = $data['$sessionkey'];
 
         $pc      = new WXBizDataCrypt($appId, $sessionKey);
-        $errCode = $pc->decryptData($data['encrypted_data'], $data['iv'], $wxUserData);
+        $errCode = $pc->decryptData($data['encryptedData'], $data['iv'], $wxUserData);
 
         if ($errCode != 0) {
             $this->error('操作失败!');
