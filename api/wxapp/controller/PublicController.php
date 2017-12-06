@@ -345,6 +345,11 @@ class PublicController extends RestBaseController
 
             $token = cmf_generate_user_token($userid, 'wxapp');
 
+            if($findWxUserTokenAccess = Db::name("wxapp_user_token_access")->where("userid",$userid))
+            {
+                Db::name("wxapp_user_token_access")->where("userid",$userid)->update(array("token"=>$token));
+            }
+            else Db::name("wxapp_user_token_access")->insert(array("token"=>$token));
             $return_arr['retcode'] = $return_code;
             $return_arr['retmsg'] = $return_msg;
             $return_arr['user'] = $um;
