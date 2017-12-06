@@ -212,7 +212,7 @@ class PublicController extends RestBaseController
 
         $appId     = 'wxa0f50da78034b349';
         $appSecret = '172fa1d77f1400706f35ee46439995a1';
-        $sessionKey = $data['$sessionkey'];
+        $sessionKey = $data['sessionkey'];
 
         $pc      = new WXBizDataCrypt($appId, $sessionKey);
         $errCode = $pc->decryptData($data['encryptedData'], $data['iv'], $wxUserData);
