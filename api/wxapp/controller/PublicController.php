@@ -220,8 +220,8 @@ class PublicController extends RestBaseController
         if ($errCode != 0) {
             $this->error('操作失败!');
         }
-print_r($wxUserData);
-        $openid = $wxUserData['openid'];
+
+        $openid = $wxUserData['openId'];
         $unionid = $wxUserData['unionId'];
         $des = new \DESEncrypt();
         if ($data['dailiuid'] != "")
@@ -351,73 +351,6 @@ print_r($wxUserData);
             $return_arr['token'] = $token;
             echo json_encode($return_arr);
         }
-
-
-        $findThirdPartyUser = Db::name("third_party_user")
-            ->where('openid', $openid)
-            ->where('app_id', $appId)
-            ->find();
-
-        $currentTime = time();
-        $ip          = $this->request->ip(0, true);
-
-        $wxUserData['sessionKey'] = $sessionKey;
-        unset($wxUserData['watermark']);
-
-        if ($findThirdPartyUser) {
-            $token = cmf_generate_user_token($findThirdPartyUser['user_id'], 'wxapp');
-
-            $userData = [
-                'last_login_ip'   => $ip,
-                'last_login_time' => $currentTime,
-                'login_times'     => ['exp', 'login_times+1'],
-                'more'            => json_encode($wxUserData)
-            ];
-
-            if (isset($wxUserData['unionId'])) {
-                $userData['union_id'] = $wxUserData['unionId'];
-            }
-
-            Db::name("third_party_user")
-                ->where('openid', $openid)
-                ->where('app_id', $appId)
-                ->update($userData);
-
-        } else {
-
-            //TODO 使用事务做用户注册
-            $userId = Db::name("user")->insertGetId([
-                'create_time'     => $currentTime,
-                'user_status'     => 1,
-                'user_type'       => 2,
-                'sex'             => $wxUserData['gender'],
-                'user_nickname'   => $wxUserData['nickName'],
-                'avatar'          => $wxUserData['avatarUrl'],
-                'last_login_ip'   => $ip,
-                'last_login_time' => $currentTime,
-            ]);
-
-            Db::name("third_party_user")->insert([
-                'openid'          => $openid,
-                'user_id'         => $userId,
-                'third_party'     => 'wxapp',
-                'app_id'          => $appId,
-                'last_login_ip'   => $ip,
-                'union_id'        => isset($wxUserData['unionId']) ? $wxUserData['unionId'] : '',
-                'last_login_time' => $currentTime,
-                'create_time'     => $currentTime,
-                'login_times'     => 1,
-                'status'          => 1,
-                'more'            => json_encode($wxUserData)
-            ]);
-
-            $token = cmf_generate_user_token($userId, 'wxapp');
-
-        }
- //       {"retcode":200,"retmsg":"查询成功","user":{"userid":"1257BE656D2E0827","openid":"oKDAi0W8OVd6-b5AEAewyBMiV5UE","unionId":"oErfQwH7iyLXxfug51hBD7PvgH3o","nickname":"杨祥贵","headurl":"https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKXOSA55icqibmsd6n2WNlpuPcogHAgF5Ct1MVH6FeQbGkiciauETDicbuqLxqLb5qNPnS58hTMo3qbFEQ/0","accmoney":31.0000,"isdaili":-1,"dailiuid":"B99B34E3EB184237"},"token":"b79b32f49be30d70b41f4a59fb3381fe"}
-  //      $user["userid"] = $userid;
-
-        $this->success("登录成功!", ['token' => $token]);
 
     }
 
