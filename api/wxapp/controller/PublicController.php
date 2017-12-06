@@ -220,7 +220,7 @@ class PublicController extends RestBaseController
         if ($errCode != 0) {
             $this->error('操作失败!');
         }
-
+print_r($wxUserData);
         $openid = $wxUserData['openid'];
         $unionid = $wxUserData['unionId'];
         $des = new \DESEncrypt();
