@@ -12,6 +12,7 @@ use FontLib\Table\Type\name;
 use think\Db;
 use cmf\controller\RestBaseController;
 use wxapp\aes\WXBizDataCrypt;
+use wxapp\aes\DESEncrypt;
 use think\Validate;
 
 class PublicController extends RestBaseController

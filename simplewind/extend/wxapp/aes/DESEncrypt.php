@@ -1,4 +1,5 @@
 <?php
+namespace wxapp\aes;
 /**
  * Created by PhpStorm.
  * User: 祥贵
