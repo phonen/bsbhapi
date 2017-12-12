@@ -267,7 +267,7 @@ class PublicController extends RestBaseController
             }
 
             $code=200;
-            $eturn_code='SUCCESS';
+            $return_code='SUCCESS';
             $return_msg='查询成功';
             $isdaili=-1;
             $dailiuid = $userid;
