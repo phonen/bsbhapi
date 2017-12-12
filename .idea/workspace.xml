@@ -4,6 +4,7 @@
     <list default="true" id="2aa68308-175f-49bf-ab08-e8da3b4fe691" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/wxapp/controller/PublicController.php" afterPath="$PROJECT_DIR$/api/wxapp/controller/PublicController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simplewind/extend/wxapp/aes/DESEncrypt.php" afterPath="$PROJECT_DIR$/simplewind/extend/wxapp/aes/DESEncrypt.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,9 +43,11 @@
       <file leaf-file-name="PublicController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/wxapp/controller/PublicController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="24" />
-              <folding />
+            <state relative-caret-position="751">
+              <caret line="390" column="32" lean-forward="false" selection-start-line="390" selection-start-column="26" selection-end-line="390" selection-end-column="32" />
+              <folding>
+                <element signature="e#497#525#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -52,8 +55,8 @@
       <file leaf-file-name="DESEncrypt.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/simplewind/extend/wxapp/aes/DESEncrypt.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+            <state relative-caret-position="-27">
+              <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -86,6 +89,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>DESEncrypt</find>
+      <find>encode</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -627,7 +631,7 @@
       <workItem from="1512433104438" duration="8000" />
       <workItem from="1512437973872" duration="4973000" />
       <workItem from="1512518491442" duration="9321000" />
-      <workItem from="1513040845590" duration="536000" />
+      <workItem from="1513040845590" duration="2514000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1511920221900</created>
@@ -706,11 +710,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513041265250</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="1">
+      <created>1513041407953</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1513041407953</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29391000" />
+    <option name="totallyTimeSpent" value="31369000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2182" height="1416" extended-state="6" />
@@ -779,7 +790,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2349">
           <caret line="96" column="53" lean-forward="false" selection-start-line="96" selection-start-column="53" selection-end-line="96" selection-end-column="53" />
-          <folding />
+          <folding>
+            <element signature="e#497#525#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -822,7 +835,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2349">
           <caret line="96" column="53" lean-forward="false" selection-start-line="96" selection-start-column="53" selection-end-line="96" selection-end-column="53" />
-          <folding />
+          <folding>
+            <element signature="e#497#525#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -865,7 +880,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2349">
           <caret line="96" column="53" lean-forward="false" selection-start-line="96" selection-start-column="53" selection-end-line="96" selection-end-column="53" />
-          <folding />
+          <folding>
+            <element signature="e#497#525#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -908,7 +925,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2349">
           <caret line="96" column="53" lean-forward="true" selection-start-line="96" selection-start-column="53" selection-end-line="96" selection-end-column="53" />
-          <folding />
+          <folding>
+            <element signature="e#497#525#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -936,7 +955,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#497#525#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1094,6 +1115,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1146,17 +1168,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/simplewind/extend/wxapp/aes/DESEncrypt.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+        <state relative-caret-position="-27">
+          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/wxapp/controller/PublicController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="24" />
-          <folding />
+        <state relative-caret-position="751">
+          <caret line="390" column="32" lean-forward="false" selection-start-line="390" selection-start-column="26" selection-end-line="390" selection-end-column="32" />
+          <folding>
+            <element signature="e#497#525#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

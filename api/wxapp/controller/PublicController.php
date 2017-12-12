@@ -228,8 +228,8 @@ class PublicController extends RestBaseController
         if ($data['dailiuid'] != "")
         {
             //解密代理
-
-            $dailiuid = $des->decode($data['dailiuid'],'MATICSOFT');
+            $dailiuid = base64_decode($data['dailiuid']);
+//            $dailiuid = $des->decode($data['dailiuid'],'MATICSOFT');
         }
         else
         {
@@ -335,14 +335,16 @@ class PublicController extends RestBaseController
         }
 
         if($code == 200){
-            $um['userid'] = $des->encode("u".$userid,"MATICSOFT");
+            //$um['userid'] = $des->encode("u".$userid,"MATICSOFT");
+            $um['userid'] = base64_encode("u".$userid);
             $um['openid'] = $wxUserData['openId'];
             $um['unionid'] = $wxUserData['unionId'];
             $um['nickname'] = $nickname;
             $um['headurl'] = $headurl;
             $um['accmoney'] = $accmoney;
             $um['isdaili'] = $isdaili;
-            $um['dailiuid'] = $des->encode($dailiuid);
+            //$um['dailiuid'] = $des->encode($dailiuid);
+            $um['dailiuid'] = base64_encode($dailiuid);
 
             $token = cmf_generate_user_token($userid, 'wxapp');
 
@@ -379,7 +381,8 @@ class PublicController extends RestBaseController
         $des = new DESEncrypt();
         if ($data['userid'] != "")
         {
-            $userid = $des->decode($data['userid'],'MATICSOFT');
+            //$userid = $des->decode($data['userid'],'MATICSOFT');
+            $userid = base64_decode($data['userid']);
             $userid = str_replace("u","",$userid);
             if($userid>0){
                 $findWxuserData = Db::name("wxapp_user")->where("userId",$userid)->find();
