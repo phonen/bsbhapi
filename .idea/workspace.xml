@@ -42,11 +42,21 @@
       <file leaf-file-name="PublicController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/wxapp/controller/PublicController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1878">
-              <caret line="351" column="85" lean-forward="false" selection-start-line="351" selection-start-column="85" selection-end-line="351" selection-end-column="85" />
+            <state relative-caret-position="-3873">
+              <caret line="213" column="56" lean-forward="false" selection-start-line="213" selection-start-column="56" selection-end-line="213" selection-end-column="56" />
               <folding>
                 <element signature="e#497#525#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1458">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -68,7 +78,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="378">
               <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-              <folding />
+              <folding>
+                <element signature="e#497#535#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -613,7 +625,8 @@
       <workItem from="1512114414090" duration="598000" />
       <workItem from="1512433104438" duration="8000" />
       <workItem from="1512437973872" duration="4973000" />
-      <workItem from="1512518491442" duration="7688000" />
+      <workItem from="1512518491442" duration="9321000" />
+      <workItem from="1513040845590" duration="214000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1511920221900</created>
@@ -671,11 +684,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512562627287</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="1">
+      <created>1512564811401</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1512564811401</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27222000" />
+    <option name="totallyTimeSpent" value="29069000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2182" height="1416" extended-state="6" />
@@ -919,7 +939,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="e#497#535#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1037,20 +1059,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-81">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/wxapp/aes/wxBizDataCrypt.php" />
     <entry file="file://$PROJECT_DIR$/api/common/model/CommonModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1072,19 +1085,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/wxapp/controller/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/simplewind/extend/wxapp/aes/demo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1127,10 +1131,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/api/wxapp/controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding>
+            <element signature="e#497#535#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1458">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/wxapp/controller/PublicController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1878">
-          <caret line="351" column="85" lean-forward="false" selection-start-line="351" selection-start-column="85" selection-end-line="351" selection-end-column="85" />
+        <state relative-caret-position="-3873">
+          <caret line="213" column="56" lean-forward="false" selection-start-line="213" selection-start-column="56" selection-end-line="213" selection-end-column="56" />
           <folding>
             <element signature="e#497#525#0#PHP" expanded="true" />
           </folding>

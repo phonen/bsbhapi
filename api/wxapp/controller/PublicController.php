@@ -42,8 +42,8 @@ class PublicController extends RestBaseController
 
         //TODO 真实逻辑实现
         $code      = $data['code'];
-        $appId     = 'wxa0f50da78034b349';
-        $appSecret = '172fa1d77f1400706f35ee46439995a1';
+        $appId     = 'wx44647da34cfb3c4f';
+        $appSecret = '1095ba66956d1ef906aff3b13a7cb31e';
 
         $response = cmf_curl_get("https://api.weixin.qq.com/sns/jscode2session?appid=$appId&secret=$appSecret&js_code=$code&grant_type=authorization_code");
 
@@ -155,8 +155,8 @@ class PublicController extends RestBaseController
 
         //TODO 真实逻辑实现
         $code      = $data['code'];
-        $appId     = 'wxa0f50da78034b349';
-        $appSecret = '172fa1d77f1400706f35ee46439995a1';
+        $appId     = 'wx44647da34cfb3c4f';
+        $appSecret = '1095ba66956d1ef906aff3b13a7cb31e';
 
         $response = cmf_curl_get("https://api.weixin.qq.com/sns/jscode2session?appid=$appId&secret=$appSecret&js_code=$code&grant_type=authorization_code");
 
@@ -210,8 +210,8 @@ class PublicController extends RestBaseController
 
         //TODO 真实逻辑实现
 
-        $appId     = 'wxa0f50da78034b349';
-        $appSecret = '172fa1d77f1400706f35ee46439995a1';
+        $appId     = 'wx44647da34cfb3c4f';
+        $appSecret = '1095ba66956d1ef906aff3b13a7cb31e';
         $sessionKey = $data['sessionkey'];
 
         $pc      = new WXBizDataCrypt($appId, $sessionKey);
@@ -355,6 +355,38 @@ class PublicController extends RestBaseController
             $return_arr['user'] = $um;
             $return_arr['token'] = $token;
             echo json_encode($return_arr);
+        }
+
+    }
+
+    public function getuserinfo(){
+        $validate = new Validate([
+            'userid' => 'require',
+
+        ]);
+
+        $validate->message([
+            'userid.require'           => '缺少参数userid!',
+
+        ]);
+
+        $data = $this->request->param();
+        if (!$validate->check($data)) {
+            $this->error($validate->getError());
+        }
+
+        $des = new \DESEncrypt();
+        if ($data['userid'] != "")
+        {
+            $userid = $des->decode($data['userid'],'MATICSOFT');
+            $userid = str_replace("u","",$userid);
+            if($userid>0){
+                $findWxuserData = Db::name("wxapp_user")->where("userId",$userid)->find();
+                $accmoney = $findWxuserData['accmoney'];
+                $response['accmoney'] = $accmoney;
+                echo json_encode($response);
+            }
+
         }
 
     }
