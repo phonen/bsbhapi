@@ -174,7 +174,7 @@ class PublicController extends RestBaseController
 
     public function version(){
 
-        $version["isshow"] = 0;
+        $version["isshow"] = 1;
         $version["sxf"] = 0.0;
         $version["moren"] = "糍粑鸡蛋我也吃鸡蛋吃吧我也吃";
         $version["url1"] = "https://bsapi.exsde.com";

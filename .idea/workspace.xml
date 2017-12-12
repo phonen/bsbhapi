@@ -42,8 +42,8 @@
       <file leaf-file-name="PublicController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/wxapp/controller/PublicController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1426">
-              <caret line="250" column="59" lean-forward="true" selection-start-line="250" selection-start-column="59" selection-end-line="250" selection-end-column="59" />
+            <state relative-caret-position="540">
+              <caret line="176" column="30" lean-forward="false" selection-start-line="176" selection-start-column="30" selection-end-line="176" selection-end-column="30" />
               <folding>
                 <element signature="e#497#525#0#PHP" expanded="true" />
               </folding>
@@ -630,7 +630,7 @@
       <workItem from="1512433104438" duration="8000" />
       <workItem from="1512437973872" duration="4973000" />
       <workItem from="1512518491442" duration="9321000" />
-      <workItem from="1513040845590" duration="3181000" />
+      <workItem from="1513040845590" duration="3269000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1511920221900</created>
@@ -737,11 +737,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513044366184</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="1">
+      <created>1513044657065</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1513044657065</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32036000" />
+    <option name="totallyTimeSpent" value="32124000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2182" height="1416" extended-state="6" />
@@ -1196,8 +1203,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/wxapp/controller/PublicController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1426">
-          <caret line="250" column="59" lean-forward="true" selection-start-line="250" selection-start-column="59" selection-end-line="250" selection-end-column="59" />
+        <state relative-caret-position="540">
+          <caret line="176" column="30" lean-forward="false" selection-start-line="176" selection-start-column="30" selection-end-line="176" selection-end-column="30" />
           <folding>
             <element signature="e#497#525#0#PHP" expanded="true" />
           </folding>
