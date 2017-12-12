@@ -224,7 +224,7 @@ class PublicController extends RestBaseController
 
         $openid = $wxUserData['openId'];
         $unionid = $wxUserData['unionId'];
-        $des = new \DESEncrypt();
+        $des = new DESEncrypt();
         if ($data['dailiuid'] != "")
         {
             //解密代理
@@ -376,7 +376,7 @@ class PublicController extends RestBaseController
             $this->error($validate->getError());
         }
 
-        $des = new \DESEncrypt();
+        $des = new DESEncrypt();
         if ($data['userid'] != "")
         {
             $userid = $des->decode($data['userid'],'MATICSOFT');
