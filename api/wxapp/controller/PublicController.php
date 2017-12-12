@@ -279,7 +279,7 @@ class PublicController extends RestBaseController
             $query_shifuuid = 0;
             $query_shizuuid = 0;
             $log_data['remarks'] = $dailiuid;
-            Db:name("wxapp_logs")->insert($log_data);
+            Db::name("wxapp_logs")->insert($log_data);
 
             $find_shifu = Db::name("wxapp_user")->where(array("userId"=>$dailiuid))->find();
             if($find_shifu){
